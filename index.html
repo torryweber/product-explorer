@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Product Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Status Bar (iPhone-like) -->
+  <div class="status-bar">
+    <span class="time" id="status-time">9:41</span>
+    <div class="status-icons">
+      <span class="signal">■■■</span>
+      <span class="wifi">▲</span>
+      <span class="battery">100%</span>
+    </div>
+  </div>
+
+  <!-- App Container -->
+  <div id="app">
+    <!-- HOME: Brands (iPhone Home Screen style) -->
+    <section id="home-screen" class="screen active">
+      <div class="wallpaper"></div>
+      <header class="home-header">
+        <h1>Explore</h1>
+        <p class="subtitle">Choose a brand</p>
+      </header>
+      <div class="icon-grid" id="brands-grid"></div>
+      <div class="home-indicator"></div>
+    </section>
+
+    <!-- BRAND: Categories -->
+    <section id="categories-screen" class="screen">
+      <div class="nav-bar">
+        <button class="back-btn" id="back-to-home" aria-label="Back">
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
+            <path d="M10 2L2 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Brands</span>
+        </button>
+        <h2 id="brand-title">Brand</h2>
+        <div class="nav-spacer"></div>
+      </div>
+      <div class="content">
+        <p class="section-label">Categories</p>
+        <div class="icon-grid categories" id="categories-grid"></div>
+      </div>
+      <div class="home-indicator"></div>
+    </section>
+
+    <!-- CATEGORY: Products -->
+    <section id="products-screen" class="screen">
+      <div class="nav-bar">
+        <button class="back-btn" id="back-to-categories" aria-label="Back">
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
+            <path d="M10 2L2 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span id="back-category-label">Categories</span>
+        </button>
+        <h2 id="category-title">Category</h2>
+        <div class="nav-spacer"></div>
+      </div>
+      <div class="content">
+        <div class="products-grid" id="products-grid"></div>
+      </div>
+      <div class="home-indicator"></div>
+    </section>
+
+    <!-- PRODUCT DETAIL -->
+    <section id="detail-screen" class="screen">
+      <div class="nav-bar">
+        <button class="back-btn" id="back-to-products" aria-label="Back">
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
+            <path d="M10 2L2 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Products</span>
+        </button>
+        <h2 id="detail-title">Product</h2>
+        <div class="nav-spacer"></div>
+      </div>
+      <div class="content detail-content" id="product-detail"></div>
+      <div class="home-indicator"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
