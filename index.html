@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-  <title>Product Explorer</title>
+  <title>Chua Tong Hin Marketing – Product Explorer</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,11 +22,14 @@
 
   <!-- App Container -->
   <div id="app">
-    <!-- HOME: Brands (iPhone Home Screen style) -->
+    <!-- HOME: Brands -->
     <section id="home-screen" class="screen active">
       <div class="wallpaper"></div>
       <header class="home-header">
-        <h1>Explore</h1>
+        <div class="company-logo" id="company-logo">
+          <img src="logo.png" alt="Chua Tong Hin Marketing" />
+        </div>
+        <h1>Chua Tong Hin Marketing</h1>
         <p class="subtitle">Choose a brand</p>
       </header>
       <div class="search-wrap home-search">
@@ -52,7 +55,7 @@
           <span>Brands</span>
         </button>
         <h2 id="brand-title">Brand</h2>
-        <button class="cart-btn" id="cart-btn-cat" aria-label="Cart">
+        <button class="cart-btn" id="cart-btn-cat" aria-label="Enquiry">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
             <path d="M6 6h15l-1.5 9h-12L6 6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
             <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
@@ -79,7 +82,7 @@
           <span id="back-category-label">Categories</span>
         </button>
         <h2 id="category-title">Category</h2>
-        <button class="cart-btn" id="cart-btn-prod" aria-label="Cart">
+        <button class="cart-btn" id="cart-btn-prod" aria-label="Enquiry">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
             <path d="M6 6h15l-1.5 9h-12L6 6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
             <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
@@ -114,7 +117,7 @@
           <span>Products</span>
         </button>
         <h2 id="detail-title">Product</h2>
-        <button class="cart-btn" id="cart-btn-detail" aria-label="Cart">
+        <button class="cart-btn" id="cart-btn-detail" aria-label="Enquiry">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
             <path d="M6 6h15l-1.5 9h-12L6 6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
             <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
@@ -128,7 +131,7 @@
       <div class="home-indicator"></div>
     </section>
 
-    <!-- CART SCREEN -->
+    <!-- ENQUIRY / CART SCREEN -->
     <section id="cart-screen" class="screen">
       <div class="nav-bar">
         <button class="back-btn" id="back-from-cart" aria-label="Back">
@@ -137,12 +140,10 @@
           </svg>
           <span>Back</span>
         </button>
-        <h2>Cart</h2>
+        <h2>Enquiry List</h2>
         <div class="nav-spacer"></div>
       </div>
-      <div class="content cart-content" id="cart-content">
-        <!-- Filled by JS -->
-      </div>
+      <div class="content cart-content" id="cart-content"></div>
       <div class="home-indicator"></div>
     </section>
   </div>
