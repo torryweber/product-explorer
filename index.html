@@ -29,6 +29,15 @@
         <h1>Explore</h1>
         <p class="subtitle">Choose a brand</p>
       </header>
+      <div class="search-wrap home-search">
+        <div class="search-bar">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+            <path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input type="search" id="home-search" placeholder="Search brands..." autocomplete="off" />
+        </div>
+      </div>
       <div class="icon-grid" id="brands-grid"></div>
       <div class="home-indicator"></div>
     </section>
@@ -43,7 +52,15 @@
           <span>Brands</span>
         </button>
         <h2 id="brand-title">Brand</h2>
-        <div class="nav-spacer"></div>
+        <button class="cart-btn" id="cart-btn-cat" aria-label="Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6h15l-1.5 9h-12L6 6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+            <path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="cart-badge" id="cart-badge-cat">0</span>
+        </button>
       </div>
       <div class="content">
         <p class="section-label">Categories</p>
@@ -62,9 +79,26 @@
           <span id="back-category-label">Categories</span>
         </button>
         <h2 id="category-title">Category</h2>
-        <div class="nav-spacer"></div>
+        <button class="cart-btn" id="cart-btn-prod" aria-label="Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6h15l-1.5 9h-12L6 6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+            <path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="cart-badge" id="cart-badge-prod">0</span>
+        </button>
       </div>
       <div class="content">
+        <div class="search-wrap">
+          <div class="search-bar light">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <input type="search" id="product-search" placeholder="Search products..." autocomplete="off" />
+          </div>
+        </div>
         <div class="products-grid" id="products-grid"></div>
       </div>
       <div class="home-indicator"></div>
@@ -80,9 +114,35 @@
           <span>Products</span>
         </button>
         <h2 id="detail-title">Product</h2>
-        <div class="nav-spacer"></div>
+        <button class="cart-btn" id="cart-btn-detail" aria-label="Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6h15l-1.5 9h-12L6 6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+            <path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="cart-badge" id="cart-badge-detail">0</span>
+        </button>
       </div>
       <div class="content detail-content" id="product-detail"></div>
+      <div class="home-indicator"></div>
+    </section>
+
+    <!-- CART SCREEN -->
+    <section id="cart-screen" class="screen">
+      <div class="nav-bar">
+        <button class="back-btn" id="back-from-cart" aria-label="Back">
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
+            <path d="M10 2L2 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Back</span>
+        </button>
+        <h2>Cart</h2>
+        <div class="nav-spacer"></div>
+      </div>
+      <div class="content cart-content" id="cart-content">
+        <!-- Filled by JS -->
+      </div>
       <div class="home-indicator"></div>
     </section>
   </div>
